@@ -1,5 +1,5 @@
-# UNet-2022: Exploring Dynamics in Non-isomorphic Architecture
-This repository is the official implementation of [UNet-2022: Exploring Dynamics in Non-isomorphic Architecture](). We use the pipeline of [nnUNet](https://github.com/MIC-DKFZ/nnUNet), and the commands including data preprocessing, training and testing all refer to the form of nnUNet.
+# Hybrid Module with Multiple Receptive Fields and Self-Attention Layers for Medical Image Segmentation
+This repository is the official implementation of [Hybrid Module with Multiple Receptive Fields and Self-Attention Layers for Medical Image Segmentation](). We use the pipeline of [nnUNet](https://github.com/MIC-DKFZ/nnUNet), and the commands including data preprocessing, training and testing all refer to the form of nnUNet.
 # Table of contents  
 - [Installation](#Installation) 
 - [Data-Preparation](#Data-Preparation)
