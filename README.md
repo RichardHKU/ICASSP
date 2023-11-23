@@ -8,14 +8,14 @@ This repository is the official implementation of [Hybrid Module with Multiple R
 - [How_to_start_your_custom_training](#How_to_start_your_custom_training) 
 # Installation
 ```
-git clone https://github.com/282857341/UNet-2022.git
-cd UNet-2022
+git clone https://github.com/xxxxxxxx/AERFNet.git
+cd AERFNet
 conda env create -f environment.yml
-source activate UNet2022
+source activate AERFNet
 pip install -e .
 ```
 # Data-Preparation
-UNet-2022 is a 2D based network, and all data should be expressed in 2D form with ```.nii.gz``` format. You can download the organized dataset from the [link](https://drive.google.com/drive/folders/1b4IVd9pOCFwpwoqfnVpsKZ6b3vfBNL6x?usp=sharing) or download the original data from the link below. If you need to convert other formats (such as ```.jpg```) to the ```.nii.gz```, you can look up the file and modify the [file](https://github.com/282857341/UNet-2022/blob/master/nnunet/dataset_conversion/Task120_ISIC.py) based on your own datasets.
+Our proposed model is a 2D based network, and all data should be expressed in 2D form with ```.nii.gz``` format. You can download the organized dataset from the [link](https://drive.google.com/drive/folders/1b4IVd9pOCFwpwoqfnVpsKZ6b3vfBNL6x?usp=sharing) or download the original data from the link below. If you need to convert other formats (such as ```.jpg```) to the ```.nii.gz```, you can look up the file and modify the [file](https://github.com/282857341/UNet-2022/blob/master/nnunet/dataset_conversion/Task120_ISIC.py) based on your own datasets.
 
 **Dataset I**
 [ACDC](https://www.creatis.insa-lyon.fr/Challenge/acdc/)
@@ -24,9 +24,6 @@ UNet-2022 is a 2D based network, and all data should be expressed in 2D form wit
 [The Synapse multi-organ CT dataset](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
 
 **Dataset III**
-[ISIC2016](https://www.isic-archive.com/#!/topWithHeader/wideContentTop/main), [PH2](https://www.fc.up.pt/addi/ph2%20database.html)
-
-**Dataset IV**
 [EM](https://imagej.net/events/isbi-2012-segmentation-challenge#training-data)
 
 The dataset should be finally organized as follows:
