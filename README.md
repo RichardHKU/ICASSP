@@ -103,3 +103,15 @@ nnUNet_trained_models/nnUNet/2d/Task001_ACDC/nnUNetTrainerV2_unet2022_acdc/fold_
 | [FANet](https://arxiv.org/abs/1611.05431)  | 91.34      |
 | [**Ours**](https://arxiv.org/abs/1611.05431)  | **92.14**      |
 
+| Methods             | mIoU       |
+| ----------------- | ----------- |
+| [UNet](https://arxiv.org/abs/1409.1556)              | 88.30      |
+| [Wide UNet](https://arxiv.org/abs/1512.03385)          | 88.37      |
+| [UNet+](https://arxiv.org/abs/1512.03385)          | 88.89      |
+| [UNet++](https://arxiv.org/abs/1512.03385)         | 89.33      |
+| [nnUNet](https://arxiv.org/abs/2003.13678)     | 90.55      |
+| [DeSFiR](https://arxiv.org/abs/2003.13678)     | 90.92      |
+| [UNet-2022](https://arxiv.org/abs/1801.04381)       | 91.05      |
+| [FANet](https://arxiv.org/abs/1611.05431)  | 91.34      |
+| [**Ours**](https://arxiv.org/abs/1611.05431)  | **92.14**      |
+
