@@ -4,10 +4,10 @@ This repository is the official implementation of **Hybrid Module with Multiple 
 
 # Table of contents  
 - [Installation](#Installation) 
-- [Data_Preparation](#Data_Preparation)
-- [Data_Preprocessing](#Data_Preprocessing)
-- [Training_and_Testing](#Training_and_Testing) 
-- [Experiment_Results](#Experiment_Results) 
+- [Data Preparation](#Data Preparation)
+- [Data Preprocessing](#Data Preprocessing)
+- [Training and Testing](#Training and Testing) 
+- [Experiment Results](#Experiment Results) 
 # Installation
 ```
 git clone https://github.com/xxxxxxxx/AERFNet.git
