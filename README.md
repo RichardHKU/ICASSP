@@ -20,13 +20,13 @@ pip install -e .
 Our proposed model is a 2D based network, and all data should be expressed in 2D form with ```.nii.gz``` format. You can download the organized dataset from the [link](https://drive.google.com/drive/folders/1b4IVd9pOCFwpwoqfnVpsKZ6b3vfBNL6x?usp=sharing) or download the original data from the link below. If you need to convert other formats (such as ```.jpg```) to the ```.nii.gz```, you can look up the file and modify the [file](https://github.com/282857341/UNet-2022/blob/master/nnunet/dataset_conversion/Task120_ISIC.py) based on your own datasets.
 
 **Dataset I**
-[ACDC](https://www.creatis.insa-lyon.fr/Challenge/acdc/) consists of 100 MRI scans. For each sample, the myocardium (MYO), right ventricle (RV), and left ventricle (LV) are labeled for segmentation. In our experiment, we set the ratio of training, validation and testing to 7:1:2.
+[ACDC dataset](https://www.creatis.insa-lyon.fr/Challenge/acdc/) consists of 100 MRI scans. For each sample, the myocardium (MYO), right ventricle (RV), and left ventricle (LV) are labeled for segmentation. In our experiment, we set the ratio of training, validation and testing to 7:1:2.
 
 **Dataset II**
 [The Synapse multi-organ CT dataset](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789) contains 3779 axial abdominal clinical slices extracted from 30 CT scans. Following common practice, 18 samples were split for training and 12 samples for testing. The average Dice-Similarity coefficient (DSC) and average Hausdorff Distance (HD) are adopted as evaluation metrics.
 
 **Dataset III**
-[EM](https://imagej.net/events/isbi-2012-segmentation-challenge#training-data) is a neural structures segmentation dataset that involves 30 images with the size of 512*512. The training dataset contains 24 samples while the validation and test dataset contains 3 and 3 samples, repectively.
+[EM dataset](https://imagej.net/events/isbi-2012-segmentation-challenge#training-data) is a neural structures segmentation dataset that involves 30 images with the size of 512*512. The training dataset contains 24 samples while the validation and test dataset contains 3 and 3 samples, repectively.
 
 The dataset should be finally organized as follows:
 ```
