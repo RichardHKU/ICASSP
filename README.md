@@ -53,9 +53,9 @@ The dataset should be finally organized as follows:
   ├── nnUNet_trained_models/
   ├── nnUNet_preprocessed/
 ```
-One thing you should be careful of is that folder imagesTr contains both training set and validation set, and correspondingly, the value of ```numTraining``` in dataset.json equals the case number in the imagesTr. The division of the training set and validation set will be done in the network configuration located at ```nnunet/network_configuration/config.py```.
+One thing you should be careful of is that folder imagesTr contains both the training set and validation set, and correspondingly, the value of ```numTraining``` in dataset.json equals the case number in the imagesTr. The division of the training set and validation set will be done in the network configuration located at ```nnunet/network_configuration/config.py```.
 
-The evaulate.py is used for calculating the evaulation metrics and can be found in the [link](https://drive.google.com/drive/folders/1b4IVd9pOCFwpwoqfnVpsKZ6b3vfBNL6x?usp=sharing) of the organized datasets or you can write it by yourself. The existing of evaulate.py will not affect the data preprocessing, training and testing.
+The evaulate.py is used for calculating the evaluation metrics and can be found in the [link](https://drive.google.com/drive/folders/1b4IVd9pOCFwpwoqfnVpsKZ6b3vfBNL6x?usp=sharing) of the organized datasets, including testing segmentation performance on all 13 organs on Synapse dataset. The existence of evaulate.py will not affect the data preprocessing, training, and testing.
 
 # Data_Preprocessing
 ```
@@ -91,7 +91,7 @@ nnUNet_trained_models/nnUNet/2d/Task001_ACDC/nnUNetTrainerV2_unet2022_acdc/fold_
 nnUNet_trained_models/nnUNet/2d/Task001_ACDC/nnUNetTrainerV2_unet2022_acdc/fold_0/model_best.model.pkl
 ```
 # Experiment_Results
-Results on **Synapse dataset** (ALL **13 organs**: Spleen, Right/Left Kidney, Gallbladder, Esophagus, Liver, Stomach, Aorta, Inferior Vena Cava, Portal Vein Splenic Vein, Pancreas and Right/Left Adrenal Gland)
+Results on **Synapse dataset** on **all 13 organs**. (Spleen, Right/Left Kidney, Gallbladder, Esophagus, Liver, Stomach, Aorta, Inferior Vena Cava, Portal Vein Splenic Vein, Pancreas and Right/Left Adrenal Gland)
 | **Method**  | **Dimension** | **DSC** | **HD** | **Splee** | **RKid** | **LKid** | **Gall** | **Eso** | **Liver** | **Sto** | **Aorta** | **IVC** | **Veins** | **Pancr** | **RAd** | **LAd** |
 |-----------------------------------|-------------------------------|-------------------------------|--------------------------------------|------------------------|-----------------------|-----------------------|-----------------------|----------------------|------------------------|----------------------|------------------------|----------------------|------------------------|------------------------|----------------------|----------------------|
 | [TransUNet](https://arxiv.org/abs/1409.1556)    | 2D                            | 70.17                                | 24.73                  | 84.78                 | 69.04                 | 76.09                 | 48.64                | 68.04                  | 94.24                | 73.51                  | 86.93                | 77.29                  | 65.61                  | 61.81                | 56.14                | 50.06             |
