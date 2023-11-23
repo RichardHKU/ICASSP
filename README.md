@@ -1,11 +1,13 @@
 # Hybrid Module with Multiple Receptive Fields and Self-Attention Layers for Medical Image Segmentation
-This repository is the official implementation of [Hybrid Module with Multiple Receptive Fields and Self-Attention Layers for Medical Image Segmentation](). We use the pipeline of [nnUNet](https://github.com/MIC-DKFZ/nnUNet), and the commands including data preprocessing, training and testing all refer to the form of nnUNet.
+
+This repository is the official implementation of **Hybrid Module with Multiple Receptive Fields and Self-Attention Layers for Medical Image Segmentation**. We provide the code which contains data preprocessing, training, and testing. Specifically,  we test all **13 organs** in the Synapse dataset instead of 8 organs, which is typically reported in previous works. Our implementation refers to the implementation of [nnUNet](https://github.com/MIC-DKFZ/nnUNet). 
+
 # Table of contents  
 - [Installation](#Installation) 
-- [Data-Preparation](#Data-Preparation)
-- [Data-Preprocessing](#Data-Preprocessing)
-- [Training_or_Testing_Command (includeing Pretrained_model_link)](#Training_or_Testing_Command) 
-- [How_to_start_your_custom_training](#How_to_start_your_custom_training) 
+- [Data_Preparation](#Data_Preparation)
+- [Data_Preprocessing](#Data_Preprocessing)
+- [Training_and_Testing](#Training_and_Testing) 
+- [Experiment_Results](#Experiment_Results) 
 # Installation
 ```
 git clone https://github.com/xxxxxxxx/AERFNet.git
@@ -14,7 +16,7 @@ conda env create -f environment.yml
 source activate AERFNet
 pip install -e .
 ```
-# Data-Preparation
+# Data_Preparation
 Our proposed model is a 2D based network, and all data should be expressed in 2D form with ```.nii.gz``` format. You can download the organized dataset from the [link](https://drive.google.com/drive/folders/1b4IVd9pOCFwpwoqfnVpsKZ6b3vfBNL6x?usp=sharing) or download the original data from the link below. If you need to convert other formats (such as ```.jpg```) to the ```.nii.gz```, you can look up the file and modify the [file](https://github.com/282857341/UNet-2022/blob/master/nnunet/dataset_conversion/Task120_ISIC.py) based on your own datasets.
 
 **Dataset I**
@@ -54,7 +56,8 @@ The dataset should be finally organized as follows:
 One thing you should be careful of is that folder imagesTr contains both training set and validation set, and correspondingly, the value of ```numTraining``` in dataset.json equals the case number in the imagesTr. The division of the training set and validation set will be done in the network configuration located at ```nnunet/network_configuration/config.py```.
 
 The evaulate.py is used for calculating the evaulation metrics and can be found in the [link](https://drive.google.com/drive/folders/1b4IVd9pOCFwpwoqfnVpsKZ6b3vfBNL6x?usp=sharing) of the organized datasets or you can write it by yourself. The existing of evaulate.py will not affect the data preprocessing, training and testing.
-# Data-Preprocessing
+
+# Data_Preprocessing
 ```
 nnUNet_convert_decathlon_task -i path/to/nnUNet_raw_data/Task01_ACDC
 ```
@@ -65,7 +68,7 @@ nnUNet_plan_and_preprocess -t 1
 Where ```-t 1``` means the command will preprocess the data of the Task001_ACDC.
 Before this step, you should set the environment variables to ensure the framework could know the path of ```nnUNet_raw```, ```nnUNet_preprocessed```, and ```nnUNet_trained_models```. The detailed construction can be found in [nnUNet](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md)
 
-# Training_or_Testing_Command
+# Training_and_Testing
 ```
 bash train_or_test.sh -c 0 -n unet2022_acdc -i 1 -s 0.5 -t true -p true 
 ```
@@ -87,5 +90,5 @@ Before you start the testing, please make sure the model_best.model and model_be
 nnUNet_trained_models/nnUNet/2d/Task001_ACDC/nnUNetTrainerV2_unet2022_acdc/fold_0/model_best.model
 nnUNet_trained_models/nnUNet/2d/Task001_ACDC/nnUNetTrainerV2_unet2022_acdc/fold_0/model_best.model.pkl
 ```
-# How_to_start_your_custom_training
+# Experiment_Results
 Every time you start a new training, we recommend that you create a new trainer that is located at ```nnunet/training/network_training``` to differentiate it from other trainers and make it inherited from the ```nnUNetTrainer```. After that, you can start training or testing using the above command.
