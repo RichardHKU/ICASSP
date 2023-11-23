@@ -109,6 +109,20 @@ Results on **Synapse dataset** (LV: left ventricle, RV: right ventricle, and MYO
 | nnFormer~\cite{zhou2021nnformer}  | 3D                            | 80.24                                | 16.27                  | 88.79                 | 84.90                 | 83.23                 | 65.90                | \textbf{79.94}         | 95.80                | \underline{84.34}      | 89.97                | 84.07                  | 72.83                  | \textbf{78.83}       | 62.97                | \textbf{71.54}    |
 | \textbf{Ours}                     | 2D                            | \textbf{82.13}                       | \textbf{10.89}         | \textbf{91.26}        | \textbf{87.81}        | \textbf{89.74}        | \underline{66.19}    | \underline{77.97}      | \textbf{96.48}       | \textbf{86.64}         | \textbf{91.87}       | \textbf{87.01}         | \textbf{77.76}         | 76.07                | \underline{69.03}    | \underline{69.89} |
 
+Results on **ACDC dataset** (LV: left ventricle, RV: right ventricle, and MYO: myocardium.)
+| Methods             | mIoU       |
+| ----------------- | ----------- |
+| [UNet](https://arxiv.org/abs/1409.1556)              | 88.30      |
+| [Wide UNet](https://arxiv.org/abs/1512.03385)          | 88.37      |
+| [UNet+](https://arxiv.org/abs/1512.03385)          | 88.89      |
+| [UNet++](https://arxiv.org/abs/1512.03385)         | 89.33      |
+| [nnUNet](https://arxiv.org/abs/2003.13678)     | 90.55      |
+| [DeSFiR](https://arxiv.org/abs/2003.13678)     | 90.92      |
+| [UNet-2022](https://arxiv.org/abs/1801.04381)       | 91.05      |
+| [FANet](https://arxiv.org/abs/1611.05431)  | 91.34      |
+| [**Ours**](https://arxiv.org/abs/1611.05431)  | **92.14**      |
+
+
 Results on **EM dataset**
 | Methods             | mIoU       |
 | ----------------- | ----------- |
