@@ -91,27 +91,30 @@ nnUNet_trained_models/nnUNet/2d/Task001_ACDC/nnUNetTrainerV2_unet2022_acdc/fold_
 nnUNet_trained_models/nnUNet/2d/Task001_ACDC/nnUNetTrainerV2_unet2022_acdc/fold_0/model_best.model.pkl
 ```
 # Experiment_Results
-| Methods             | mIoU       |
-| ----------------- | ----------- |
-| [UNet](https://arxiv.org/abs/1409.1556)              | 88.30      |
-| [Wide UNet](https://arxiv.org/abs/1512.03385)          | 88.37      |
-| [UNet+](https://arxiv.org/abs/1512.03385)          | 88.89      |
-| [UNet++](https://arxiv.org/abs/1512.03385)         | 89.33      |
-| [nnUNet](https://arxiv.org/abs/2003.13678)     | 90.55      |
-| [DeSFiR](https://arxiv.org/abs/2003.13678)     | 90.92      |
-| [UNet-2022](https://arxiv.org/abs/1801.04381)       | 91.05      |
-| [FANet](https://arxiv.org/abs/1611.05431)  | 91.34      |
-| [**Ours**](https://arxiv.org/abs/1611.05431)  | **92.14**      |
 
+Results on **ACDC dataset** (LV: left ventricle, RV: right ventricle, and MYO: myocardium.)
+| Methods             | DSC       | RV       | MYO       | LV       |
+| ----------------- | ----------- | ----------- | ----------- | ----------- |
+| [ViT+CUP](https://arxiv.org/abs/1409.1556)              | 81.45      |81.46      |79.71      |92.18      |
+| [TransUNet](https://arxiv.org/abs/1512.03385)          | 89.71      |88.86      |84.54     |95.73      |
+| [SwinUNet](https://arxiv.org/abs/1512.03385)          | 90.00      |88.55      |85.62      |95.83      |
+| [MT-UNet](https://arxiv.org/abs/1512.03385)         | 90.43      |86.64      |89.04      |95.62      |
+| [nnUNet](https://arxiv.org/abs/1512.03385)         | 92.32      |90.39      |90.53      |96.05      |
+| [UNet-2022](https://arxiv.org/abs/2003.13678)     | 92.83      |91.04      |90.97      |96.49      |
+| [UNETR](https://arxiv.org/abs/2003.13678)     | 88.61      |85.29      |86.52      |94.02      |
+| [nnFormer](https://arxiv.org/abs/1801.04381)       | 92.06      |90.94      |89.58      |95.65      |
+| [**Ours**]  | **93.05**      |**91.41**      |**91.20**      |**96.35**      |
+
+Results on **EM dataset**
 | Methods             | mIoU       |
 | ----------------- | ----------- |
-| [UNet](https://arxiv.org/abs/1409.1556)              | 88.30      |
-| [Wide UNet](https://arxiv.org/abs/1512.03385)          | 88.37      |
+| [UNet](https://arxiv.org/abs/1505.04597)              | 88.30      |
+| [Wide UNet](https://arxiv.org/abs/2102.06442)          | 88.37      |
 | [UNet+](https://arxiv.org/abs/1512.03385)          | 88.89      |
-| [UNet++](https://arxiv.org/abs/1512.03385)         | 89.33      |
-| [nnUNet](https://arxiv.org/abs/2003.13678)     | 90.55      |
-| [DeSFiR](https://arxiv.org/abs/2003.13678)     | 90.92      |
-| [UNet-2022](https://arxiv.org/abs/1801.04381)       | 91.05      |
-| [FANet](https://arxiv.org/abs/1611.05431)  | 91.34      |
-| [**Ours**](https://arxiv.org/abs/1611.05431)  | **92.14**      |
+| [UNet++](https://arxiv.org/abs/1912.05074)         | 89.33      |
+| [nnUNet](https://arxiv.org/abs/1809.10486)     | 90.55      |
+| [DeSFiR](https://arxiv.org/abs/2109.05676)     | 90.92      |
+| [UNet-2022](https://arxiv.org/abs/2210.15566)       | 91.05      |
+| [FANet](https://arxiv.org/abs/2103.17235)  | 91.34      |
+| [**Ours**]  | **92.14**      |
 
